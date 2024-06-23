@@ -1,0 +1,270 @@
+{
+	"Id": "3a92446de24906b9f10f878f118d90aeafc62bffb42255d66557368bce867815",
+	"Created": "2024-05-26T05:20:47.605873027Z",
+	"Path": "/bin/sh",
+	"Args": [
+		"-c",
+		"echo Container started\ntrap \"exit 0\" 15\n\nexec \"$@\"\nwhile sleep 1 & wait $!; do :; done",
+		"-"
+	],
+	"State": {
+		"Status": "running",
+		"Running": true,
+		"Paused": false,
+		"Restarting": false,
+		"OOMKilled": false,
+		"Dead": false,
+		"Pid": 1190,
+		"ExitCode": 0,
+		"Error": "",
+		"StartedAt": "2024-06-01T11:10:09.448811057Z",
+		"FinishedAt": "2024-05-26T05:59:14.211582334Z"
+	},
+	"Image": "sha256:e812853aaf5113cd3483e6d25998683cef179ace66a73118be8e4a9e453f5b0c",
+	"ResolvConfPath": "/var/lib/docker/containers/3a92446de24906b9f10f878f118d90aeafc62bffb42255d66557368bce867815/resolv.conf",
+	"HostnamePath": "/var/lib/docker/containers/3a92446de24906b9f10f878f118d90aeafc62bffb42255d66557368bce867815/hostname",
+	"HostsPath": "/var/lib/docker/containers/3a92446de24906b9f10f878f118d90aeafc62bffb42255d66557368bce867815/hosts",
+	"LogPath": "/var/lib/docker/containers/3a92446de24906b9f10f878f118d90aeafc62bffb42255d66557368bce867815/3a92446de24906b9f10f878f118d90aeafc62bffb42255d66557368bce867815-json.log",
+	"Name": "/funny_proskuriakova",
+	"RestartCount": 0,
+	"Driver": "overlay2",
+	"Platform": "linux",
+	"MountLabel": "",
+	"ProcessLabel": "",
+	"AppArmorProfile": "",
+	"ExecIDs": [
+		"11f5acba2d9b5fe1d102663832d7870a0632e8b121e13b309b2fe405645b9d7e",
+		"7e03af0c282afaa35fa97d6a594ec8060ca27da19fd4d67993d3178e6ee6e496",
+		"3e056226651d74b80f93980e0342835189aed0acea4cf042d93d6770e489a1a2",
+		"451010f9eb047ed48180899b1acc224ff5d876df9b5b5e37f60ec4566f834dcf",
+		"7b128f0269ea4ad11980b2d9ec846af1ce00c8bec92dd168d4acc1ebec4e5845",
+		"96b0499f9ace4cedf4a5008e5f72d9b33697fec5af69292265b075af40fbabc5"
+	],
+	"HostConfig": {
+		"Binds": null,
+		"ContainerIDFile": "",
+		"LogConfig": {
+			"Type": "json-file",
+			"Config": {}
+		},
+		"NetworkMode": "default",
+		"PortBindings": {},
+		"RestartPolicy": {
+			"Name": "no",
+			"MaximumRetryCount": 0
+		},
+		"AutoRemove": false,
+		"VolumeDriver": "",
+		"VolumesFrom": null,
+		"ConsoleSize": [
+			13,
+			89
+		],
+		"CapAdd": null,
+		"CapDrop": null,
+		"CgroupnsMode": "host",
+		"Dns": [],
+		"DnsOptions": [],
+		"DnsSearch": [],
+		"ExtraHosts": null,
+		"GroupAdd": null,
+		"IpcMode": "private",
+		"Cgroup": "",
+		"Links": null,
+		"OomScoreAdj": 0,
+		"PidMode": "",
+		"Privileged": false,
+		"PublishAllPorts": false,
+		"ReadonlyRootfs": false,
+		"SecurityOpt": null,
+		"UTSMode": "",
+		"UsernsMode": "",
+		"ShmSize": 67108864,
+		"Runtime": "runc",
+		"Isolation": "",
+		"CpuShares": 0,
+		"Memory": 0,
+		"NanoCpus": 0,
+		"CgroupParent": "",
+		"BlkioWeight": 0,
+		"BlkioWeightDevice": [],
+		"BlkioDeviceReadBps": [],
+		"BlkioDeviceWriteBps": [],
+		"BlkioDeviceReadIOps": [],
+		"BlkioDeviceWriteIOps": [],
+		"CpuPeriod": 0,
+		"CpuQuota": 0,
+		"CpuRealtimePeriod": 0,
+		"CpuRealtimeRuntime": 0,
+		"CpusetCpus": "",
+		"CpusetMems": "",
+		"Devices": [],
+		"DeviceCgroupRules": null,
+		"DeviceRequests": null,
+		"MemoryReservation": 0,
+		"MemorySwap": 0,
+		"MemorySwappiness": null,
+		"OomKillDisable": false,
+		"PidsLimit": null,
+		"Ulimits": [],
+		"CpuCount": 0,
+		"CpuPercent": 0,
+		"IOMaximumIOps": 0,
+		"IOMaximumBandwidth": 0,
+		"Mounts": [
+			{
+				"Type": "bind",
+				"Source": "c:\\Users\\Micro\\Documents\\hello\\do-app",
+				"Target": "/workspaces/do-app",
+				"Consistency": "cached"
+			},
+			{
+				"Type": "volume",
+				"Source": "vscode",
+				"Target": "/vscode"
+			},
+			{
+				"Type": "bind",
+				"Source": "/run/desktop/mnt/host/wsl/docker-desktop-bind-mounts/Ubuntu/1e3f10efd5b66e89511d4ace575ae6f00a11f07d7c405a94977aebc6893fa00c",
+				"Target": "/tmp/vscode-wayland-540c3888-bf51-4f19-aec0-2638e43db163.sock"
+			}
+		],
+		"MaskedPaths": [
+			"/proc/asound",
+			"/proc/acpi",
+			"/proc/kcore",
+			"/proc/keys",
+			"/proc/latency_stats",
+			"/proc/timer_list",
+			"/proc/timer_stats",
+			"/proc/sched_debug",
+			"/proc/scsi",
+			"/sys/firmware",
+			"/sys/devices/virtual/powercap"
+		],
+		"ReadonlyPaths": [
+			"/proc/bus",
+			"/proc/fs",
+			"/proc/irq",
+			"/proc/sys",
+			"/proc/sysrq-trigger"
+		]
+	},
+	"GraphDriver": {
+		"Data": {
+			"LowerDir": "/var/lib/docker/overlay2/1ac78f10c3c3de16894ce6d6f2b46bc7842d8bda5b7ae210fb6cf4c41d46eb04-init/diff:/var/lib/docker/overlay2/0i1bc5nh31axcjgq50ch73n0a/diff:/var/lib/docker/overlay2/9hxdp8aahn8l9ww4bkipy4gr8/diff:/var/lib/docker/overlay2/2up0fdfzfgkcg69mwsgthfh6v/diff:/var/lib/docker/overlay2/9te8c6i0nyzx8x2x6h00da3xy/diff:/var/lib/docker/overlay2/1gg2vfahputg8efg26u8qdzv0/diff:/var/lib/docker/overlay2/67f100908fe64b167f155e0a9ce9686f39173a77254de75e941c10c97fbf9412/diff:/var/lib/docker/overlay2/057f782050ee1b80219b970201fc3b93ca9995649270f0c5597e8712b0c7a859/diff:/var/lib/docker/overlay2/6ce2ece558a04c532bc5cfc32024bce446c75943e69216180856197e6c6fe049/diff:/var/lib/docker/overlay2/10c4a71d61db91e587f68cd481f38877e8672048f1324c82bd8f09c2db6317d0/diff:/var/lib/docker/overlay2/366ff5583560dfcdf9efdbf8b0c9f5b12da02d363762541c16588dd59119499d/diff:/var/lib/docker/overlay2/b7e354d580466e3a878638ab326fbdec2883c7376e2dee49bfce4e9d8c8103f9/diff:/var/lib/docker/overlay2/89bd0ad84ea95112e749bdc485052e224c8f5dab388ed18f37b6d034a1755d48/diff:/var/lib/docker/overlay2/67917590a9e21680071492059f4d5e7a731de877f52aa6531d8cf9ccdf889237/diff",
+			"MergedDir": "/var/lib/docker/overlay2/1ac78f10c3c3de16894ce6d6f2b46bc7842d8bda5b7ae210fb6cf4c41d46eb04/merged",
+			"UpperDir": "/var/lib/docker/overlay2/1ac78f10c3c3de16894ce6d6f2b46bc7842d8bda5b7ae210fb6cf4c41d46eb04/diff",
+			"WorkDir": "/var/lib/docker/overlay2/1ac78f10c3c3de16894ce6d6f2b46bc7842d8bda5b7ae210fb6cf4c41d46eb04/work"
+		},
+		"Name": "overlay2"
+	},
+	"Mounts": [
+		{
+			"Type": "bind",
+			"Source": "/run/desktop/mnt/host/wsl/docker-desktop-bind-mounts/Ubuntu/1e3f10efd5b66e89511d4ace575ae6f00a11f07d7c405a94977aebc6893fa00c",
+			"Destination": "/tmp/vscode-wayland-540c3888-bf51-4f19-aec0-2638e43db163.sock",
+			"Mode": "",
+			"RW": true,
+			"Propagation": "rprivate"
+		},
+		{
+			"Type": "volume",
+			"Name": "vscode",
+			"Source": "/var/lib/docker/volumes/vscode/_data",
+			"Destination": "/vscode",
+			"Driver": "local",
+			"Mode": "z",
+			"RW": true,
+			"Propagation": ""
+		},
+		{
+			"Type": "bind",
+			"Source": "c:\\Users\\Micro\\Documents\\hello\\do-app",
+			"Destination": "/workspaces/do-app",
+			"Mode": "",
+			"RW": true,
+			"Propagation": "rprivate"
+		}
+	],
+	"Config": {
+		"Hostname": "3a92446de249",
+		"Domainname": "",
+		"User": "",
+		"AttachStdin": false,
+		"AttachStdout": true,
+		"AttachStderr": true,
+		"ExposedPorts": {
+			"8000/tcp": {}
+		},
+		"Tty": false,
+		"OpenStdin": false,
+		"StdinOnce": false,
+		"Env": [
+			"PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+			"LANG=C.UTF-8",
+			"GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+			"PYTHON_VERSION=3.12.3",
+			"PYTHON_PIP_VERSION=24.0",
+			"PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/dbf0c85f76fb6e1ab42aa672ffca6f0a675d9ee4/public/get-pip.py",
+			"PYTHON_GET_PIP_SHA256=dfe9fd5c28dc98b5ac17979a953ea550cec37ae1b47a5116007395bfacff2ab9"
+		],
+		"Cmd": [
+			"-c",
+			"echo Container started\ntrap \"exit 0\" 15\n\nexec \"$@\"\nwhile sleep 1 & wait $!; do :; done",
+			"-"
+		],
+		"Image": "vsc-do-app-78e66b859808a499bca39fdff496c540369ee7585d4b42140513d629e06ec063",
+		"Volumes": null,
+		"WorkingDir": "/do-app",
+		"Entrypoint": [
+			"/bin/sh"
+		],
+		"OnBuild": null,
+		"Labels": {
+			"devcontainer.config_file": "c:\\Users\\Micro\\Documents\\hello\\do-app\\.devcontainer\\devcontainer.json",
+			"devcontainer.local_folder": "c:\\Users\\Micro\\Documents\\hello\\do-app",
+			"maintainer": "ammara-gul"
+		}
+	},
+	"NetworkSettings": {
+		"Bridge": "",
+		"SandboxID": "da132a596b2a27efed99ec1c6239ffc6c069060a1f6be9a2aad0a0c6472de3ce",
+		"SandboxKey": "/var/run/docker/netns/da132a596b2a",
+		"Ports": {
+			"8000/tcp": null
+		},
+		"HairpinMode": false,
+		"LinkLocalIPv6Address": "",
+		"LinkLocalIPv6PrefixLen": 0,
+		"SecondaryIPAddresses": null,
+		"SecondaryIPv6Addresses": null,
+		"EndpointID": "29e6c963a1f0cdb09ee8acdeed5429c416402057074b99b63bb6dcad423579b3",
+		"Gateway": "172.17.0.1",
+		"GlobalIPv6Address": "",
+		"GlobalIPv6PrefixLen": 0,
+		"IPAddress": "172.17.0.2",
+		"IPPrefixLen": 16,
+		"IPv6Gateway": "",
+		"MacAddress": "02:42:ac:11:00:02",
+		"Networks": {
+			"bridge": {
+				"IPAMConfig": null,
+				"Links": null,
+				"Aliases": null,
+				"MacAddress": "02:42:ac:11:00:02",
+				"NetworkID": "ce6df549584262fb781a6e916367c9fbc4861c74b157a545e40eeaed5fdc6d98",
+				"EndpointID": "29e6c963a1f0cdb09ee8acdeed5429c416402057074b99b63bb6dcad423579b3",
+				"Gateway": "172.17.0.1",
+				"IPAddress": "172.17.0.2",
+				"IPPrefixLen": 16,
+				"IPv6Gateway": "",
+				"GlobalIPv6Address": "",
+				"GlobalIPv6PrefixLen": 0,
+				"DriverOpts": null,
+				"DNSNames": null
+			}
+		}
+	},
+	"Ports": []
+}
