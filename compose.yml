@@ -10,6 +10,9 @@ services:
          - my-api-net
       depends_on:
          - postgres_db
+      volumes:
+      - ./do_app:/do-app                 # : right side is the path inside the container
+# host machine (where Docker is running)   :       
    postgres_db:
       image: postgres:latest
       restart: always
@@ -20,7 +23,7 @@ services:
          - POSTGRES_PASSWORD=my_password
          - POSTGRES_DB=mydatabase
       ports:
-         - "5433:5432"
+         - "5442:5432"
       volumes:
          # - volumeName:containerPath:ro     -> ro -> read only
          - postgres_db:/var/lib/postgresql/data
