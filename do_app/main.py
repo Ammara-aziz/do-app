@@ -13,7 +13,7 @@ class Todo (SQLModel, table = True):
 
 #engine is one for whole application
 connection_string :str = str(settings.DATABASE_URL).replace("postgresql", "postgresql+psycopg")
-engine = create_engine(connection_string, connect_args= {"sslmode" : "require"}, pool_recycle=300, pool_size = 10, echo =True)
+engine = create_engine(connection_string, connect_args= {}, pool_recycle=300, pool_size = 10, echo =True)
 
 
 def create_tables():
@@ -33,10 +33,23 @@ async def lifespan(app:FastAPI):
     print("Tables Created")
     yield
 
-app: FastAPI = FastAPI(lifespan =lifespan, title = "To Do App", version="1.0.0")
+app: FastAPI = FastAPI(lifespan =lifespan, 
+                       title = "To Do App", 
+                       version="1.0.0", 
+#                        servers=[
+#     {
+#         "url" : "http://127.0.0.1", # ADD NGROK URL here Before Creating GPT Action
+#         "description" : "Development Server"
+#     }
+# ]
+
+   )
+
+
 
 @app.get('/')
 async def root():
+    SQLModel.metadata.create_all(engine)
     return {"msg" : "Welcome to daily todo app"}
 
 @app.post('/todos/', response_model = Todo)
