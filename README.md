@@ -125,3 +125,38 @@ for rebuilding
 
 - docker compose up -d --build
 - docker exec -it containerId /bin/bash
+
+
+# APACHE Kafka
+
+* to install kafka
+  - docker pull apache/kafka:3.7.0
+* start the kafka container
+<!-- -p means publish  : internal port always remember -->
+  - docker run -p  9092:9092 apache/kafka:3.7.0
+  - docker ps
+* to connect to container
+  - docker exec -it contrId1st4ltrs /bin/bash
+  - ls
+* Kafka commands are in this directory in container
+ - /opt/kafka/bin  so *    cd  /opt/kafka/bin
+ - ls
+ * before creating 1st Event you must create a "topic" in another terminal
+  - /opt/kafka/bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localhost:9092
+
+* to display usage information
+ - /opt/kafka/bin/kafka-topics.sh --describe --topic quickstart-events --bootstrap-server localhost:9092
+* write some events into the topic
+   - /opt/kafka/bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server localhost:9092
+
+  * Open a terminal and access your Docker container
+  - docker exec -it cntrId /bin/bash
+ 
+* run kafka console consumer client 
+               # to read event you have just created
+  -  /opt/kafka/bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
+  
+
+
+ 
+
