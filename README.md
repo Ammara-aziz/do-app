@@ -87,24 +87,24 @@ compose.yml - json -> notation (key value) - yml -> superset of json , also with
 
 # in compose file after writting to check whether file is written correct or not
 
-- docker compose config
-  first open docker
-- docker compose ps
-- docker compose up
-- docker compose up -d
+ - docker compose config
+*  first open docker
+ - docker compose ps
+ - docker compose up
+ - docker compose up -d
 
-and if some error occur then docker compose down
+* and if some error occur then docker compose down
 
 in compose.yaml
 
-first create db then fastaPI will use it
+-> first create db then fastaPI will use it
 so we will create depends_on variable
 
 depends_on: - postgres_db
 
-         priority db then fastapi
+  *   priority db then fastapi
 
-- docker compose ps
+ - docker compose ps
 
 postgres -> server, is a software in which db is running , to access we need Client software -> pgAdmin to Access db , what type of data is being placed
 
@@ -113,7 +113,7 @@ postgres -> server, is a software in which db is running , to access we need Cli
 - postgresql for window
 - pgadmin
 
-connect your pgAdmin with your env file by entering 
+-> connect your pgAdmin with your env file by entering 
 * DATABASE_URL=postgresql://username:your_password@Containername:5432/mydatabase
 
 
@@ -121,10 +121,10 @@ database-> databasename ->schema -> public -> tables
 
 # After making changes in any file
 
-for rebuilding
+* for rebuilding
 
-- docker compose up -d --build
-- docker exec -it containerId /bin/bash
+ - docker compose up -d --build
+ - docker exec -it containerId /bin/bash
 
 
 # APACHE Kafka
@@ -133,30 +133,25 @@ for rebuilding
   - docker pull apache/kafka:3.7.0
 * start the kafka container
 <!-- -p means publish  : internal port always remember -->
-  - docker run -p  9092:9092 apache/kafka:3.7.0
-  - docker ps
+   - docker run -p  9092:9092 apache/kafka:3.7.0
+   - docker ps
 * to connect to container
   - docker exec -it contrId1st4ltrs /bin/bash
   - ls
 * Kafka commands are in this directory in container
- - /opt/kafka/bin  so *    cd  /opt/kafka/bin
- - ls
+  - /opt/kafka/bin  so *    cd  /opt/kafka/bin
+  - ls
  * before creating 1st Event you must create a "topic" in another terminal
   - /opt/kafka/bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localhost:9092
 
 * to display usage information
- - /opt/kafka/bin/kafka-topics.sh --describe --topic quickstart-events --bootstrap-server localhost:9092
+  - /opt/kafka/bin/kafka-topics.sh --describe --topic quickstart-events --bootstrap-server localhost:9092
 * write some events into the topic
    - /opt/kafka/bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server localhost:9092
 
-  * Open a terminal and access your Docker container
+* Open a terminal and access your Docker container
   - docker exec -it cntrId /bin/bash
  
 * run kafka console consumer client 
-               # to read event you have just created
+                            #  to read event you have just created
   -  /opt/kafka/bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
-  
-
-
- 
-
