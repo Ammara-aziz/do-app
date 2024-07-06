@@ -34,11 +34,11 @@ docker ps -a
   *  delete the contanier
 - docker rm id 
 
-<!-- Using the
+Using the
 # docker exec -it command, you can interact with a running Docker container by opening a bash shell inside it.
 useful for debugging, running administrative tasks, or exploring the container's filesystem and processes
 
-# docker exec -it <container_name_or_id> /bin/bash -->
+# docker exec -it <container_name_or_id> /bin/bash
 
 Remote Explorer
 
